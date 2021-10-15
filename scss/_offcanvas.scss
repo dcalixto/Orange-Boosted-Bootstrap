@@ -36,7 +36,9 @@
 
 .offcanvas-title {
   margin-bottom: 0;
+  font-size: $offcanvas-title-font-size;
   line-height: $offcanvas-title-line-height;
+  letter-spacing: $h4-spacing;
 }
 
 .offcanvas-body {
