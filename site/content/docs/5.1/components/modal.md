@@ -667,7 +667,7 @@ Our default modal without modifier class constitutes the "medium" size modal.
   <div class="modal-dialog modal-xl">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title h4" id="exampleModalXlLabel">Extra large modal</h5>
+        <h5 class="modal-title" id="exampleModalXlLabel">Extra large modal</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
@@ -681,7 +681,7 @@ Our default modal without modifier class constitutes the "medium" size modal.
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title h4" id="exampleModalLgLabel">Large modal</h5>
+        <h5 class="modal-title" id="exampleModalLgLabel">Large modal</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
@@ -695,7 +695,7 @@ Our default modal without modifier class constitutes the "medium" size modal.
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title h4" id="exampleModalSmLabel">Small modal</h5>
+        <h5 class="modal-title" id="exampleModalSmLabel">Small modal</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
@@ -764,7 +764,7 @@ Another override is the option to pop up a modal that covers the user viewport, 
   <div class="modal-dialog modal-fullscreen">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title h4" id="exampleModalFullscreenLabel">Full screen modal</h5>
+        <h5 class="modal-title" id="exampleModalFullscreenLabel">Full screen modal</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
@@ -781,7 +781,7 @@ Another override is the option to pop up a modal that covers the user viewport, 
   <div class="modal-dialog modal-fullscreen-sm-down">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title h4" id="exampleModalFullscreenSmLabel">Full screen below sm</h5>
+        <h5 class="modal-title" id="exampleModalFullscreenSmLabel">Full screen below sm</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
@@ -798,7 +798,7 @@ Another override is the option to pop up a modal that covers the user viewport, 
   <div class="modal-dialog modal-fullscreen-md-down">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title h4" id="exampleModalFullscreenMdLabel">Full screen below md</h5>
+        <h5 class="modal-title" id="exampleModalFullscreenMdLabel">Full screen below md</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
@@ -815,7 +815,7 @@ Another override is the option to pop up a modal that covers the user viewport, 
   <div class="modal-dialog modal-fullscreen-lg-down">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title h4" id="exampleModalFullscreenLgLabel">Full screen below lg</h5>
+        <h5 class="modal-title" id="exampleModalFullscreenLgLabel">Full screen below lg</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
@@ -832,7 +832,7 @@ Another override is the option to pop up a modal that covers the user viewport, 
   <div class="modal-dialog modal-fullscreen-xl-down">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title h4" id="exampleModalFullscreenXlLabel">Full screen below xl</h5>
+        <h5 class="modal-title" id="exampleModalFullscreenXlLabel">Full screen below xl</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
@@ -849,7 +849,7 @@ Another override is the option to pop up a modal that covers the user viewport, 
   <div class="modal-dialog modal-fullscreen-xxl-down">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title h4" id="exampleModalFullscreenXxlLabel">Full screen below xxl</h5>
+        <h5 class="modal-title" id="exampleModalFullscreenXxlLabel">Full screen below xxl</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal"><span class="visually-hidden">Close</span></button>
       </div>
       <div class="modal-body">
