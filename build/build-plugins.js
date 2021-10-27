@@ -15,11 +15,70 @@ const glob = require('glob')
 const { babel } = require('@rollup/plugin-babel')
 const banner = require('./banner.js')
 
-const srcPath = path.resolve(__dirname, '../js/src/')
-const jsFiles = glob.sync(srcPath + '/**/*.js')
+const rootPath = path.resolve(__dirname, '../js/dist/')
+const plugins = [
+  babel({
+    // Only transpile our source code
+    exclude: 'node_modules/**',
+    // Include the helpers in each file, at most one copy of each
+    babelHelpers: 'bundled'
+  })
+]
+const bsPlugins = {
+  Data: path.resolve(__dirname, '../js/src/dom/data.js'),
+  EventHandler: path.resolve(__dirname, '../js/src/dom/event-handler.js'),
+  Manipulator: path.resolve(__dirname, '../js/src/dom/manipulator.js'),
+  SelectorEngine: path.resolve(__dirname, '../js/src/dom/selector-engine.js'),
+  Alert: path.resolve(__dirname, '../js/src/alert.js'),
+  Base: path.resolve(__dirname, '../js/src/base-component.js'),
+  Button: path.resolve(__dirname, '../js/src/button.js'),
+  Carousel: path.resolve(__dirname, '../js/src/carousel.js'),
+  Collapse: path.resolve(__dirname, '../js/src/collapse.js'),
+  Dropdown: path.resolve(__dirname, '../js/src/dropdown.js'),
+  Modal: path.resolve(__dirname, '../js/src/modal.js'),
+  Offcanvas: path.resolve(__dirname, '../js/src/offcanvas.js'),
+  Popover: path.resolve(__dirname, '../js/src/popover.js'),
+  QuantitySelector: path.resolve(__dirname, '../js/src/quantity-selector.js'),
+  ScrollSpy: path.resolve(__dirname, '../js/src/scrollspy.js'),
+  Tab: path.resolve(__dirname, '../js/src/tab.js'),
+  Toast: path.resolve(__dirname, '../js/src/toast.js'),
+  Tooltip: path.resolve(__dirname, '../js/src/tooltip.js')
+}
 
-// Array which holds the resolved plugins
-const resolvedPlugins = []
+const defaultPluginConfig = {
+  external: [
+    bsPlugins.Data,
+    bsPlugins.Base,
+    bsPlugins.EventHandler,
+    bsPlugins.SelectorEngine
+  ],
+  globals: {
+    [bsPlugins.Data]: 'Data',
+    [bsPlugins.Base]: 'Base',
+    [bsPlugins.EventHandler]: 'EventHandler',
+    [bsPlugins.SelectorEngine]: 'SelectorEngine'
+  }
+}
+
+const getConfigByPluginKey = pluginKey => {
+  switch (pluginKey) {
+    case 'Alert':
+    case 'Offcanvas':
+    case 'Tab':
+      return defaultPluginConfig
+
+    case 'Base':
+    case 'Button':
+    case 'Carousel':
+    case 'Collapse':
+    case 'Modal':
+    case 'QuantitySelector':
+    case 'ScrollSpy': {
+      const config = Object.assign(defaultPluginConfig)
+      config.external.push(bsPlugins.Manipulator)
+      config.globals[bsPlugins.Manipulator] = 'Manipulator'
+      return config
+    }
 
 // Trims the "js" extension and uppercases => first letter, hyphens, backslashes & slashes
 const filenameToEntity = filename => filename.replace('.js', '')
