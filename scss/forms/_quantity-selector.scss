@@ -29,7 +29,9 @@
       border-left: none;
     }
   }
-  .form-control:not(:focus) {
-    border-left: none;
+  .form-control {
+    &:not(:focus, :invalid) {
+      border-left: none;
+    }
   }
 }

@@ -72,23 +72,27 @@
         // Boosted mod: no box-shadow
 
         // Boosted mod: focus styles don't match validation state
+
+        // Boosted mod: Add border color to buttons for form element QuantitySelector
+        & ~ button {
+          border-color: $color;
+        }
+        // End mod
       }
     }
 
-    // .quantity-selector {
-    //   .input-group {
-    //     .form-control {
-    //       @include form-validation-state-selector($state) {
-    //         border-right: none;
-    //         border-left: none;
-    //       }
-    //     }
-    //     button:first-of-type,
-    //     button:last-of-type {
-    //       border-color: $color;
-    //     }
-    //   }
-    // }
+    // Boosted mod: Remove border on input for form element QuantitySelector
+    .quantity-selector {
+      .input-group {
+        .form-control {
+          @include form-validation-state-selector($state) {
+            border-right: none;
+            border-left: none;
+          }
+        }
+      }
+    }
+    // End mod
 
     // Boosted mod: no icon in background for textarea
 
