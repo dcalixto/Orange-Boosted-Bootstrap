@@ -10,6 +10,11 @@ toc: true
 
 Quantity selector is a form element used to select a number. For proper styling, use one of the two **required** contextual classes (e.g., `.quantity-selector-large`).
 
+You can specify a default value in the `value` attribute of your input.
+
+Value will vary between the values define in the `min` and `max` attributes (negatives values are allowed).
+
+The custom `data-bs-round` attribute will help you to define the number of digits to appear after the decimal point.
 {{< example >}}
 <div class="quantity-selector quantity-selector-large">
     <label class="input-group-text" for="inputQuantitySelector1">Quantity selector large: </label>

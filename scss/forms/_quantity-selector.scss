@@ -8,7 +8,10 @@
   input {
     padding: 0;
     text-align: center;
-    background-color: #fff;
+
+    &:read-only {
+      background-color: #fff;
+    }
 
     &::-webkit-inner-spin-button,
     &::-webkit-outer-spin-button {
