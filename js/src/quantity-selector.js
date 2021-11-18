@@ -27,7 +27,6 @@ const SELECTOR_STEP_UP_BUTTON = '[data-bs-step="up"]'
 const SELECTOR_STEP_DOWN_BUTTON = '[data-bs-step="down"]'
 const SELECTOR_COUNTER_INPUT = '[data-bs-step="counter"]'
 const SELECTOR_INPUT_GROUP = '.input-group'
-const SELECTOR_ALLOW_NEGATIVES_VALUES = 'allow-negatives-values'
 
 /**
 * ------------------------------------------------------------------------
@@ -41,14 +40,18 @@ class QuantitySelector extends BaseComponent {
     return NAME
   }
 
-  // Public
+  // PubliC
   static StepUp(event) {
     event.preventDefault()
     const PARENT = event.target.closest(SELECTOR_INPUT_GROUP)
     const COUNTER_INPUT = PARENT.querySelector(SELECTOR_COUNTER_INPUT)
 
-    if (COUNTER_INPUT.value >= 0 || PARENT.classList.contains(SELECTOR_ALLOW_NEGATIVES_VALUES)) {
-      COUNTER_INPUT.value = ++COUNTER_INPUT.value
+    const MAX = COUNTER_INPUT.getAttribute('max')
+    const STEP = Number(COUNTER_INPUT.getAttribute('step'))
+    const ROUND = Number(COUNTER_INPUT.getAttribute('data-bs-round'))
+
+    if (Number(COUNTER_INPUT.value) < MAX) {
+      COUNTER_INPUT.value = (Number(COUNTER_INPUT.value) + STEP).toFixed(ROUND).toString()
     }
   }
 
@@ -57,32 +60,15 @@ class QuantitySelector extends BaseComponent {
     const PARENT = event.target.closest(SELECTOR_INPUT_GROUP)
     const COUNTER_INPUT = PARENT.querySelector(SELECTOR_COUNTER_INPUT)
 
-    if (COUNTER_INPUT.value > 0 || PARENT.classList.contains(SELECTOR_ALLOW_NEGATIVES_VALUES)) {
-      COUNTER_INPUT.value = --COUNTER_INPUT.value
+    const MIN = COUNTER_INPUT.getAttribute('min')
+    const STEP = Number(COUNTER_INPUT.getAttribute('step'))
+    const ROUND = Number(COUNTER_INPUT.getAttribute('data-bs-round'))
+
+    if (Number(COUNTER_INPUT.value) > MIN) {
+      COUNTER_INPUT.value = (Number(COUNTER_INPUT.value) - STEP).toFixed(ROUND).toString()
     }
   }
 }
-
-// JavaScript starter for disabling form submissions if there are invalid fields
-(function () {
-  'use strict'
-
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll('.needs-validation')
-
-  // Loop over them and prevent submission
-  Array.prototype.slice.call(forms)
-    .forEach(function (form) {
-      form.addEventListener('submit', function (event) {
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-
-        form.classList.add('was-validated')
-      }, false)
-    })
-})()
 
 /**
  * ------------------------------------------------------------------------

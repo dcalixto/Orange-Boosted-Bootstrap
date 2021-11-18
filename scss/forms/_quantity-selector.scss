@@ -9,26 +9,24 @@
     padding: 0;
     text-align: center;
     background-color: #fff;
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      margin: 0;
+      appearance: none;
+    }
   }
   button {
     border: .125rem solid #ccc;
     &:first-of-type {
+      order: -1;
       border-right: none;
     }
     &:last-of-type {
       border-left: none;
     }
   }
+  .form-control:not(:focus) {
+    border-left: none;
+  }
 }
-
-// .was-validated {
-//   .quantity-selector {
-//     .form-control {
-//       border-right: none;
-//       border-left: none;
-//     }
-//     button {
-//       border-color: $form-feedback-invalid-color;
-//     }
-//   }
-// }
