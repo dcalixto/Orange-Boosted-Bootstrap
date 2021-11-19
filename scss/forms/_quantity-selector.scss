@@ -11,12 +11,7 @@
 
     &:read-only {
       background-color: #fff;
-    }
-
-    &::-webkit-inner-spin-button,
-    &::-webkit-outer-spin-button {
-      margin: 0;
-      appearance: none;
+      appearance: textfield;
     }
   }
   button {
