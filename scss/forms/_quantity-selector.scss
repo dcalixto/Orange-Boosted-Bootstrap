@@ -13,6 +13,12 @@
       background-color: #fff;
       appearance: textfield;
     }
+
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      margin: 0;
+      -webkit-appearance: none;
+    }
   }
   button {
     border: .125rem solid #ccc;
