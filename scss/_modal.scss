@@ -160,9 +160,10 @@
   padding: $modal-footer-padding; // Boosted mod
   border-top: if($modal-footer-border-color == null, null, $modal-footer-border-width solid $modal-footer-border-color); // Boosted mod
   @include border-bottom-radius($modal-content-inner-border-radius);
+
   @include media-breakpoint-down(md) {
     flex-direction: column-reverse;
-    > * {
+    > .btn {
       width: 100%;
     }
   }
