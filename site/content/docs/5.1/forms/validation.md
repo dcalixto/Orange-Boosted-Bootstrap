@@ -284,6 +284,29 @@ Validation styles are available for the following form controls and components:
   </div>
 
   <div class="mb-3">
+    <div class="quantity-selector quantity-selector-l mb-3">
+        <label class="form-label" for="inputQuantitySelector1">Quantity selector: </label>
+        <div class="input-group">
+            <input type="number" id="inputQuantitySelector1" class="form-control" aria-live="polite"
+                data-bs-step="counter" name="quantity" title="quantity" value="99" min="0" max="10" step="1" data-bs-round="0" aria-label="Quantity selector">
+            <button type="button" class="btn btn-icon btn-secondary btn-sm"  aria-describedby="inputQuantitySelector1" data-bs-step="down">
+                <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false">
+                    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#remove" />
+                </svg>
+                <span class="visually-hidden">Step down</span>
+            </button>
+            <button type="button" class="btn btn-icon btn-secondary btn-sm"  aria-describedby="inputQuantitySelector1" data-bs-step="up">
+                <svg width="1rem" height="1rem" fill="currentColor" aria-hidden="true" focusable="false">
+                    <use xlink:href="/docs/{{< param docs_version >}}/assets/img/boosted-sprite.svg#add" />
+                </svg>
+                <span class="visually-hidden">Step up</span>
+            </button>
+            <div class="invalid-feedback">Please enter a valid number</div>
+        </div>
+    </div>
+  </div>
+
+  <div class="mb-3">
     <button class="btn btn-primary" type="submit" disabled>Submit form</button>
   </div>
 </form>

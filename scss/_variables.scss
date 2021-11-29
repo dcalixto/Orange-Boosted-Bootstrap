@@ -971,6 +971,11 @@ $input-line-height-lg:                  $h5-line-height !default; // Boosted mod
 $input-transition:                      border-color $transition-duration $transition-timing, $transition-focus !default;
 
 $form-color-width:                      3rem !default;
+
+// Boosted mod: Quantity selector specific variables
+$quantity-selector-l-width:             7.5em !default;
+// End mod
+
 // scss-docs-end form-input-variables
 
 // scss-docs-start form-check-variables

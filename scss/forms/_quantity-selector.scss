@@ -1,19 +1,11 @@
 .quantity-selector {
-  &.quantity-selector-large .input-group {
-    width: 7.5em;
-  }
-  &.quantity-selector-small .input-group {
-    width: 5.625em;
-  }
 
   .input-group {
+    width: 5.625em;
 
-    & > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
-      margin: 0;
-    }
-
-    input {
+    .form-control {
       padding: 0;
+      font-size: $font-size-sm;
       text-align: center;
       appearance: textfield;
 
@@ -31,8 +23,16 @@
 
   }
 
+  &.quantity-selector-l .input-group {
+    width: $quantity-selector-l-width;
+
+    .form-control {
+      font-size: $font-size-base;
+    }
+  }
+
   button {
-    border: .125rem solid $gray-500;
+    border: $border-width solid $gray-500;
     &:first-of-type {
       order: -1;
       border-right: none;
