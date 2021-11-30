@@ -41,13 +41,17 @@
   }
 
   button {
+
     border: $border-width solid $gray-500;
     &:first-of-type {
+      @include button-icon($quantity-selector-icon-remove, $size: $quantity-selector-icon-width $quantity-selector-icon-remove-height, $pseudo: "after");
       order: -1;
       border-right: none;
     }
     &:last-of-type {
+      @include button-icon($quantity-selector-icon-add, $size: $quantity-selector-icon-width $quantity-selector-icon-add-height, $pseudo: "after");
       border-left: none;
     }
   }
+
 }
