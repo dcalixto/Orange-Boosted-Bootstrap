@@ -43,3 +43,11 @@ The custom `data-bs-round` attribute will help you to define the number of digit
   </div>
 </div>
 {{< /example >}}
+
+## Sass
+
+### Variables
+
+For more details, please have a look at the exhaustive list of available variables:
+
+{{< scss-docs name="quantity-selector" file="scss/_variables.scss" >}}
