@@ -3,6 +3,15 @@
   .input-group {
     width: 5.625em;
 
+    $validation-messages: "";
+    @each $state in map-keys($form-validation-states) {
+      $validation-messages: $validation-messages + ":not(." + unquote($state) + "-tooltip)" + ":not(." + unquote($state) + "-feedback)";
+    }
+
+    > :not(:first-child):not(.dropdown-menu)#{$validation-messages} {
+      margin-left: 0;
+    }
+
     .form-control {
       padding: 0;
       font-size: $font-size-sm;
