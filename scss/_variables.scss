@@ -1850,10 +1850,16 @@ $step-item-arrow-shape:  polygon(0% 0%, subtract(100%, $border-width) 50%, 0% 10
 
 //// Quantity selector
 // scss-docs-start quantity-selector
-$quantity-selector-icon-add:           var(--#{$boosted-variable-prefix}add-icon) !default;
-$quantity-selector-icon-remove:        var(--#{$boosted-variable-prefix}remove-icon) !default;
-$quantity-selector-icon-width:         .875rem !default;
-$quantity-selector-icon-remove-height: .125rem !default;
-$quantity-selector-icon-add-height:    .875rem !default;
+// Icons
+$quantity-selector-icon-add:              var(--#{$boosted-variable-prefix}add-icon) !default;
+$quantity-selector-icon-remove:           var(--#{$boosted-variable-prefix}remove-icon) !default;
+// Variables for large version
+$quantity-selector-icon-width:            .875rem !default;
+$quantity-selector-icon-remove-height:    .125rem !default;
+$quantity-selector-icon-add-height:       .875rem !default;
+// Variables for small version
+$quantity-selector-icon-sm-width:         .625rem !default;
+$quantity-selector-icon-sm-remove-height: .125rem !default;
+$quantity-selector-icon-sm-add-height:    .625rem !default;
 // scss-docs-end quantity-selector
 // End mod
