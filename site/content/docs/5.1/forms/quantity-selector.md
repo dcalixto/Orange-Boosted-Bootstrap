@@ -15,6 +15,7 @@ You can specify a default value in the `value` attribute of your input.
 Value will vary between the values define in the `min` and `max` attributes (negatives values are allowed).
 
 The custom `data-bs-round` attribute will help you to define the number of digits to appear after the decimal point.
+
 {{< example >}}
 <div class="quantity-selector mb-3">
   <label class="form-label" for="inputQuantitySelector1">Quantity selector small: </label>
